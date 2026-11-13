@@ -1,91 +1,50 @@
-# 🧡 Tree of Love - Romantic Fractal Tree Animation
+# 🧡 Tree of Love - Romantic Fractal Tree Animation for Tanu (PP) 💖 14 Nov ✨
 
-Apni girlfriend ke liye ek khoobsurat, glowing fractal tree animation — bilkul viral Instagram reel / Python turtle style mein! 
+Tanu (PP) / Mera Cute Kuchu Puchuu ke liye ek behad khoobsurat, glowing fractal tree animation with 14 Nov special love theme & 13 beautiful memories!
 
-Jab vo link par click karegi, to pehle ek pyara sa gift envelope aayega. "Khuliye Pyaar Se" tap karte hi romantic ambient music bajna shuru hoga aur screen par ek pyara sa red turtle **aaram aaram se** har ek branch draw karega. Har shaakh par glowing amber nodes aur golden blossoms khilenge, aur neeche glowing **luv u 🧡** heartbeat animation ke saath dikhai dega!
-
----
-
-## ✨ Features (Khaas Baatein)
-
-1. **Step-by-Step Romantic Growth ("Aaram Aaram Se")**:
-   - Depth-first branching animation jisme pehle left side aur fir right side draw hota hai, bilkul authentic Python turtle ki tarah!
-   - Animated **Red Turtle Cursor** jo branch ke saath-saath ghoomta hai.
-   - Har ek branch joint par warm glowing amber/gold light.
-   - Har leaf tip par glowing fairy lights / blossoms ka cluster.
-
-2. **Romantic Ambient Music Box (Built-in Web Audio)**:
-   - Soft, dreamy lullaby/piano chords jo bina kisi external file ke har mobile aur computer par bina ruke bajti hain.
-   - Top right mein mute/unmute toggle.
-
-3. **"luv u 🧡" Glowing Text**:
-   - Warm golden-orange gradient font with neon glow.
-   - Heart emoji ka organic heartbeat pulse animation.
-
-4. **1-Click Personalization (Naam Customize Karein)**:
-   - Link mein naam daal sakte hain: `?name=Sangu` ya `?name=Pooja&msg=I%20Love%20You%20Forever`
-   - Screen par "Customize" button se bina code chhue naam aur message badla ja sakta hai.
-
-5. **Screen Tap Hearts & Interactive Magic**:
-   - Kahin bhi screen par tap karne se floating glowing hearts aur sparkles udate hain.
-
-6. **Wallpaper Download 📸**:
-   - "Wallpaper" button dabakar poori tree aur message ka high-resolution photo phone gallery ya wallpaper ke liye download ho jata hai.
-
-7. **Replay & Speed Control 🐢 / ⚡**:
-   - Replay button se tree ko dubara grow hota dekh sakte hain.
-   - "Aaram Se" ya "Fast" mode select kar sakte hain.
+Jab vo link par click karegi:
+1. Pehle ek grand glowing **14 NOV Love Emblem / Logo** aur pyara sa gift envelope aayega jisme unki 13 nayi photos ka romantic slideshow chalega.
+2. "Khuliye Pyaar Se 💌" tap karte hi romantic ambient music shuru hoga.
+3. Red turtle cursor screen par branch-by-branch tree draw karega, har joint par warm glowing amber light khilegi.
+4. Tree ke canopy par curved neon arc mein khilega: **Tanu 💖 PP 💖 Kuchu Puchuu ✨**
+5. Neeche glowing message aayega: **Loves you so much.. dear Tanu (PP) 💖✨** aur **14 Nov ✨ Mera pyara Kuchu Puchuu.. Always & Forever! 🌸💫**
+6. Top right & dock par "Memories (13) 💖" button se poori 13 photos ki glowing gallery khulegi.
 
 ---
 
-## 🚀 1. Abhi Apne Computer Par Kaise Dekhein (Instant Preview)
+## 🚀 1. Localhost Par Kaise Dekhein (Running Locally)
 
-Aapke desktop par `/Users/amandeepverma/Desktop/sangu` folder mein:
-1. `index.html` file par **double-click** karein. Ye seedhe aapke Safari ya Chrome browser mein khul jayegi!
-2. Ya terminal mein run karein:
-   ```bash
-   python3 -m http.server 8080
-   ```
-   Aur browser mein open karein: [http://localhost:8080](http://localhost:8080)
+Server already local host par active hai:
+- **Direct Local Link:** [http://localhost:8080](http://localhost:8080)
 
----
-
-## 🌐 2. GF Ko Send Karne Ke Liye FREE Online Link Kaise Banayein (30 Seconds)
-
-Agar aapko usko WhatsApp / Instagram par share karne ke liye online link (`https://...`) chahiye:
-
-### Option A: Netlify Drop (Sabse aasan - 30 seconds, Bina login ke bhi)
-1. Apne browser mein [app.netlify.com/drop](https://app.netlify.com/drop) open karein.
-2. Apne desktop ke `sangu` folder ko drag karke wahan chhod dein (drop karein).
-3. 5 second mein aapko ek live link mil jayega (jaise `https://romantic-tree-xyz.netlify.app`).
-4. Link ke aage aap uska naam laga sakte hain:
-   `https://romantic-tree-xyz.netlify.app/?name=Sangu`
-
-### Option B: GitHub Pages (Permanent & Free)
-1. GitHub par ek naya repository banayein (jaise `sangu-love`).
-2. `index.html`, `style.css`, aur `script.js` upload karein.
-3. Repository Settings -> Pages -> Source mein "main branch" select karke Save karein.
-4. Aapko link mil jayega: `https://yourusername.github.io/sangu-love/?name=Sangu`
-
-### Option C: Vercel (1-Click)
-1. [vercel.com](https://vercel.com) par login karke folder upload kar dein.
+Terminal se restart karne ke liye:
+```bash
+python3 -m http.server 8080
+```
 
 ---
 
-## 🐍 3. Python Turtle Script (Desktop Version)
+## 📸 2. Features
 
-Agar aapko screen recording karni ho ya Python mein run karke dekhna ho:
+1. **Big 14 Nov Love Logo / Badge**:
+   - Golden-ruby gradient crest with sparkling stars and glowing neon aura.
+   - Screen ke top aur opening card par shandaar logo.
+
+2. **13 Beautiful Memories**:
+   - Sabhi 13 nayi photos slideshow aur interactive modal gallery mein added hain.
+   - Smooth touch-swipe, thumbnail strip, next/prev navigation.
+
+3. **Special Personalization for Tanu & PP**:
+   - Sab jagah "Tanu", "PP", aur "Kuchu Puchuu" added.
+   - Curved name arc embracing the tree canopy.
+
+4. **Wallpaper Download 🖼️**:
+   - "Wallpaper" button dabakar poora glowing tree, 14 Nov crest, aur love message HD photo mein phone ya desktop ke liye download ho jata hai (`Tree_Of_Love_Tanu_PP_14Nov.png`).
+
+---
+
+## 🐍 3. Python Turtle Desktop Script
 
 ```bash
-cd /Users/amandeepverma/Desktop/sangu
 python3 python_tree.py
 ```
-Isme Python turtle window khulegi aur screen par tree step-by-step draw hoga.
-
----
-
-## 💌 Customized Link Examples:
-- Default: `https://your-link.com/`
-- Her Name: `https://your-link.com/?name=Sangu`
-- Custom Message: `https://your-link.com/?name=Sangu&msg=luv%20u%20so%20much%20🧡`
-- With Note: `https://your-link.com/?name=Sangu&msg=luv%20u%20🧡&note=Hamesha%20mere%20dil%20mein%20✨`

@@ -3,7 +3,7 @@
  * Step-by-step growing fractal tree with glowing fairy blossoms,
  * authentic turtle cursor, dynamic romantic aurora, shooting stars,
  * continuous rising hearts, curved "Sangitaa Jii 💖✨" letter-by-letter reveal,
- * photo gallery slideshow, and custom romantic messages for Sangu.
+ * photo gallery slideshow, and custom romantic messages for Tanu & PP.
  */
 
 (function() {
@@ -39,34 +39,79 @@
   const homeHeartsContainer = document.getElementById('home-floating-hearts');
   const ambientHeartsContainer = document.getElementById('ambient-floating-hearts');
 
-  // Curved Name Elements ("Sangitaa Jii 💖✨") in Tree Background
+  // Curved Name Elements ("Tanu 💖 PP 💖 Kuchu Puchuu ✨") in Tree Background
   const curvedNameContainer = document.getElementById('tree-curved-name');
   const curvedLettersWrap = document.getElementById('curved-letters-wrap');
   const curvedNameAura = document.getElementById('curved-name-aura');
-  const curvedNameText = "Sangitaa Jii 💖✨";
+  const curvedNameText = "Tanu 💖 PP 💖 Kuchu Puchuu ✨";
   let curvedCharElements = [];
 
-  // --- Sangu Photo Memories Gallery Data ---
-  const sanguPhotos = [
+  // --- Tanu & PP Photo Memories Gallery Data (13 Photos) ---
+  const tanuPhotos = [
     {
-      src: 'sangu_1.jpg',
+      src: 'tanu_1.jpeg',
       title: 'Ho, aate-jaate dekhoon tujh ko 🌹',
-      sub: 'Jaane hua hai ye kya mujh ko... ✨'
+      sub: 'Jaane hua hai ye kya mujh ko... Tanu 💖✨'
     },
     {
-      src: 'sangu_2.jpg',
+      src: 'tanu_2.jpeg',
       title: 'The way you look... 💖✨',
-      sub: 'Har andaaz me behad khoobsurat bbu 🥰'
+      sub: 'Har andaaz me behad pyari, mera cute kuchu puchuu 🥰'
     },
     {
-      src: 'sangu_3.jpg',
+      src: 'tanu_3.jpeg',
       title: 'Nain~Matakka & Pyari Smile 🌸',
-      sub: 'Teal saree, green bangles & your lovely smile ✨'
+      sub: 'Teri muskaan meri duniya roshan karti hai PP ✨'
     },
     {
-      src: 'sangu_4.jpg',
+      src: 'tanu_4.jpeg',
+      title: '14 Nov ✨ Pure Magic',
+      sub: 'Har pal tere saath ek haseen khwab jaisa hai Tanu 💖'
+    },
+    {
+      src: 'tanu_5.jpeg',
+      title: 'My Favorite Smile in the World 💫',
+      sub: 'Loves you more than words can ever say, kuchu puchuu 🌸'
+    },
+    {
+      src: 'tanu_6.jpeg',
       title: 'Shirt Da Button 🎶💖',
-      sub: 'Love your voice & sweetness... always stay happy with me ✨'
+      sub: 'Love your voice & sweetness... always stay happy with me PP ✨'
+    },
+    {
+      src: 'tanu_7.jpeg',
+      title: 'Khushboo Teri... 🌹✨',
+      sub: 'Teri yaadon se mehekti hai har subah o shaam Tanu 💕'
+    },
+    {
+      src: 'tanu_8.jpeg',
+      title: 'Tujh Mein Rab Dikhta Hai 💖',
+      sub: 'Yaara main kya karoon... mera pyara kuchu puchuu 🥰'
+    },
+    {
+      src: 'tanu_9.jpeg',
+      title: 'Cutest Expression Ever 🥰',
+      sub: 'Ye adaa, ye masoomiyat... sabse special ho tum PP 💖'
+    },
+    {
+      src: 'tanu_10.jpeg',
+      title: 'Pyaar Ka Ehsaas 🌸✨',
+      sub: 'Dil ki har dhadkan sirf tera naam leti hai Tanu 💖'
+    },
+    {
+      src: 'tanu_11.jpeg',
+      title: '14 Nov Forever & Always 💫',
+      sub: 'Saari khushiyan tere kadmon mein rakh doon mere kuchu puchuu ✨'
+    },
+    {
+      src: 'tanu_12.jpeg',
+      title: 'Mera Chand, Meri Duniya 🌙💖',
+      sub: 'Always by your side, holding your hand forever PP 💕'
+    },
+    {
+      src: 'tanu_13.jpeg',
+      title: 'Loves You To Infinity & Beyond 🧡✨',
+      sub: 'Tanu, PP & Kuchu Puchuu... Hamesha aur hamesha! 💖🎉'
     }
   ];
 
@@ -82,13 +127,12 @@
   const galleryCounter = document.getElementById('gallery-counter');
   const galleryPrev = document.getElementById('gallery-prev');
   const galleryNext = document.getElementById('gallery-next');
-  const thumbBtns = document.querySelectorAll('.thumb-btn');
 
   let currentGalleryIndex = 0;
 
   function openPhotoModal(index = 0) {
     if (!photoModal) return;
-    currentGalleryIndex = ((index % sanguPhotos.length) + sanguPhotos.length) % sanguPhotos.length;
+    currentGalleryIndex = ((index % tanuPhotos.length) + tanuPhotos.length) % tanuPhotos.length;
     updateGalleryView(currentGalleryIndex);
     photoModal.classList.add('active');
     photoModal.setAttribute('aria-hidden', 'false');
@@ -101,8 +145,8 @@
   }
 
   function updateGalleryView(index) {
-    currentGalleryIndex = ((index % sanguPhotos.length) + sanguPhotos.length) % sanguPhotos.length;
-    const photo = sanguPhotos[currentGalleryIndex];
+    currentGalleryIndex = ((index % tanuPhotos.length) + tanuPhotos.length) % tanuPhotos.length;
+    const photo = tanuPhotos[currentGalleryIndex];
 
     if (galleryImg) {
       galleryImg.style.opacity = '0.2';
@@ -117,11 +161,15 @@
 
     if (galleryTitle) galleryTitle.textContent = photo.title;
     if (gallerySub) gallerySub.textContent = photo.sub;
-    if (galleryCounter) galleryCounter.textContent = `${currentGalleryIndex + 1} / ${sanguPhotos.length}`;
+    if (galleryCounter) galleryCounter.textContent = `${currentGalleryIndex + 1} / ${tanuPhotos.length}`;
 
-    thumbBtns.forEach((btn, idx) => {
+    const currentThumbBtns = document.querySelectorAll('.thumb-btn');
+    currentThumbBtns.forEach((btn, idx) => {
       if (idx === currentGalleryIndex) {
         btn.classList.add('active');
+        if (btn.scrollIntoView) {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       } else {
         btn.classList.remove('active');
       }
@@ -164,7 +212,7 @@
     });
   }
 
-  thumbBtns.forEach((btn, idx) => {
+  document.querySelectorAll('.thumb-btn').forEach((btn, idx) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       updateGalleryView(idx);
@@ -201,9 +249,11 @@
     }
   });
 
-  // --- Intro Slideshow ---
+  // --- Intro Slideshow (13 Photos) ---
   const heroSlides = document.querySelectorAll('#intro-slideshow .slide');
   const slideDots = document.querySelectorAll('#slide-dots .slide-dot');
+  const heroPrev = document.getElementById('hero-prev');
+  const heroNext = document.getElementById('hero-next');
   let currentHeroSlide = 0;
   let heroSlideshowTimer = null;
 
@@ -232,9 +282,13 @@
     showHeroSlide(currentHeroSlide + 1);
   }
 
+  function prevHeroSlide() {
+    showHeroSlide(currentHeroSlide - 1);
+  }
+
   function startHeroSlideshow() {
     if (heroSlideshowTimer) clearInterval(heroSlideshowTimer);
-    heroSlideshowTimer = setInterval(nextHeroSlide, 3200);
+    heroSlideshowTimer = setInterval(nextHeroSlide, 3000);
   }
 
   function stopHeroSlideshow() {
@@ -242,6 +296,22 @@
       clearInterval(heroSlideshowTimer);
       heroSlideshowTimer = null;
     }
+  }
+
+  if (heroPrev) {
+    heroPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevHeroSlide();
+      startHeroSlideshow();
+    });
+  }
+
+  if (heroNext) {
+    heroNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextHeroSlide();
+      startHeroSlideshow();
+    });
   }
 
   slideDots.forEach((dot, idx) => {
@@ -358,9 +428,9 @@
   let animationRunning = false;
   let isTreeFinished = false;
   let userConfig = {
-    name: 'Sangu',
-    message: 'Always Stay Happy with me.. dear Sangu 💖✨',
-    note: 'want to know you more bbu. 💖✨'
+    name: 'Tanu (PP)',
+    message: 'Loves you so much.. dear Tanu (PP) 💖✨',
+    note: '14 Nov ✨ Mera pyara Kuchu Puchuu.. Always & Forever! 🌸💫'
   };
 
   // Canvas size and scale
@@ -407,24 +477,24 @@
   }
 
   function updateUIFromConfig() {
-    if (userConfig.name && userConfig.name !== 'Sangu' && userConfig.name !== 'Dear Pyari Sanguuu..') {
+    if (userConfig.name && userConfig.name !== 'Tanu (PP)' && userConfig.name !== 'Tanu' && userConfig.name !== 'Pyari Tanu (PP)') {
       introName.innerHTML = `For ${userConfig.name} <span class="heart-emoji">💖✨</span>`;
     } else {
-      introName.innerHTML = `For Dear Pyari Sanguuu.. <span class="heart-emoji">💖✨</span>`;
+      introName.innerHTML = `For Pyari Tanu (PP) <span class="heart-emoji">💖✨</span>`;
     }
     
     const msg = userConfig.message;
-    if (msg.includes('Always Stay Happy with me')) {
+    if (msg.includes('Always Stay Happy with me') || msg.includes('Loves you so much')) {
       loveTextEl.innerHTML = `
         <span class="sub-lead">Always Stay Happy with me..</span>
-        <span class="main-name">dear ${userConfig.name || 'Sangu'} <span class="heart-emoji">💖✨</span></span>
+        <span class="main-name">dear ${userConfig.name || 'Tanu (PP)'} <span class="heart-emoji">💖✨</span></span>
       `;
     } else {
       const formatted = msg.replace(/(🧡|❤️|💕|💖|✨)/g, '<span class="heart-emoji">$1</span>');
       loveTextEl.innerHTML = `<span class="main-name">${formatted}</span>`;
     }
 
-    personalizedNoteEl.textContent = userConfig.note || '';
+    personalizedNoteEl.textContent = userConfig.note || '14 Nov ✨ Mera pyara Kuchu Puchuu.. Always & Forever! 🌸💫';
   }
 
   // --- Responsive Curved Name Layout ("Sangitaa Jii 💖✨") ---
@@ -454,9 +524,9 @@
       curvedNameAura.style.height = `${archRadius * 1.3}px`;
     }
 
-    // Angle range: -148 deg (left) to -32 deg (right), apex at -90 deg
-    const startAngle = -148;
-    const endAngle = -32;
+    // Angle range: -152 deg (left) to -28 deg (right), apex at -90 deg
+    const startAngle = -152;
+    const endAngle = -28;
     const angleStep = (endAngle - startAngle) / (totalChars - 1);
 
     chars.forEach((ch, idx) => {
@@ -1147,9 +1217,9 @@
 
     toastText.innerHTML = `
       <div class="toast-lines">
-        <span class="toast-line">i like you a lot dear...</span>
-        <span class="toast-line">love your voice and the way you look..</span>
-        <span class="toast-line highlight">want to know you more bbu. 💖✨</span>
+        <span class="toast-line">Loves you so much Tanu bbu... 💖</span>
+        <span class="toast-line">You mean everything to me, PP.. mera cute kuchu puchuu 🌸</span>
+        <span class="toast-line highlight">14 Nov ✨ Always and forever with you! 💖✨</span>
       </div>
     `;
     celebrationToast.classList.add('show');
@@ -1338,6 +1408,22 @@
     }
   });
 
+  const headerDateBadge = document.getElementById('header-date-badge');
+  if (headerDateBadge) {
+    headerDateBadge.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const rect = headerDateBadge.getBoundingClientRect();
+      for (let i = 0; i < 14; i++) {
+        setTimeout(() => {
+          createFloatingHeart(
+            rect.left + rect.width * 0.5 + (Math.random() - 0.5) * 80,
+            rect.top + rect.height * 0.5 + (Math.random() - 0.5) * 30
+          );
+        }, i * 60);
+      }
+    });
+  }
+
   // --- Intro Open Action ---
   function openGift() {
     stopHeroSlideshow();
@@ -1406,9 +1492,19 @@
 
     expCtx.drawImage(staticCanvas, 0, 0, viewWidth, viewHeight);
 
+    // Top 14 Nov emblem on exported wallpaper
     expCtx.save();
     expCtx.textAlign = 'center';
-    if (userConfig.message.includes('Always Stay Happy with me')) {
+    expCtx.fillStyle = '#ffbe0b';
+    expCtx.shadowColor = 'rgba(255, 180, 50, 0.85)';
+    expCtx.shadowBlur = 16;
+    expCtx.font = 'bold 15px Outfit, sans-serif';
+    expCtx.fillText('✨ 14 NOV • TOGETHER FOREVER ✨', viewWidth * 0.5, 45);
+    expCtx.restore();
+
+    expCtx.save();
+    expCtx.textAlign = 'center';
+    if (userConfig.message.includes('Always Stay Happy with me') || userConfig.message.includes('Loves you so much')) {
       expCtx.fillStyle = '#ffe0b2';
       expCtx.shadowColor = 'rgba(255, 180, 50, 0.85)';
       expCtx.shadowBlur = 15;
@@ -1419,7 +1515,7 @@
       expCtx.shadowColor = 'rgba(255, 120, 40, 0.9)';
       expCtx.shadowBlur = 20;
       expCtx.font = 'bold 30px Outfit, sans-serif';
-      expCtx.fillText(`dear ${userConfig.name || 'Sangu'} 💖✨`, viewWidth * 0.5, viewHeight - 74);
+      expCtx.fillText(`dear ${userConfig.name || 'Tanu (PP)'} 💖✨`, viewWidth * 0.5, viewHeight - 74);
     } else {
       expCtx.fillStyle = '#ff9e2c';
       expCtx.shadowColor = 'rgba(255, 120, 40, 0.9)';
@@ -1430,7 +1526,7 @@
     expCtx.restore();
 
     const link = document.createElement('a');
-    link.download = `Tree_Of_Love_Sangitaa.png`;
+    link.download = `Tree_Of_Love_Tanu_PP_14Nov.png`;
     link.href = exportCanvas.toDataURL('image/png');
     link.click();
 

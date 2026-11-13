@@ -166,7 +166,7 @@ html, body {
   display: inline-block;
   transform-origin: center center;
   font-family: 'Outfit', 'Playfair Display', sans-serif;
-  font-size: clamp(22px, 4.8vw, 38px);
+  font-size: clamp(16px, 3.8vw, 30px);
   font-weight: 800;
   color: #ffbe0b;
   opacity: 0;
@@ -605,7 +605,7 @@ html, body {
 }
 
 /* ==========================================================================
-   Gift Envelope / Home Page Card (Featuring Hero Photo Slideshow of Sangu)
+   Gift Envelope / Home Page Card (Featuring Hero Photo Slideshow of Tanu & PP)
    ========================================================================== */
 
 .intro-overlay {
@@ -795,10 +795,209 @@ html, body {
   font-size: clamp(1.4rem, 4.5vw, 1.85rem);
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   letter-spacing: -0.3px;
   line-height: 1.25;
   text-shadow: 0 2px 14px rgba(255, 77, 109, 0.45);
+}
+
+/* --- Big 14 Nov Love Logo / Crest --- */
+.love-logo-badge {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 30, 80, 0.28) 0%, rgba(255, 158, 27, 0.3) 50%, rgba(138, 43, 226, 0.28) 100%);
+  border: 1.8px solid rgba(255, 205, 95, 0.75);
+  box-shadow: 0 0 28px rgba(255, 120, 30, 0.45), inset 0 0 16px rgba(255, 205, 95, 0.25);
+  border-radius: 22px;
+  padding: 10px 20px 8px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  animation: logoFloat 4.5s ease-in-out infinite alternate;
+}
+
+@keyframes logoFloat {
+  0% { transform: translateY(0px) scale(1); box-shadow: 0 0 22px rgba(255, 120, 30, 0.4); }
+  100% { transform: translateY(-4px) scale(1.02); box-shadow: 0 0 35px rgba(255, 60, 110, 0.6), 0 0 24px rgba(255, 180, 50, 0.55); }
+}
+
+.logo-shimmer {
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: rotate(25deg);
+  animation: logoShimmerSweep 4.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes logoShimmerSweep {
+  0%, 60% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.logo-ribbon {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  color: #ffda79;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(255, 200, 50, 0.6);
+  margin-bottom: 2px;
+}
+
+.logo-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo-wing-heart {
+  font-size: 22px;
+  filter: drop-shadow(0 0 8px rgba(255, 60, 110, 0.8));
+  animation: heartWingBeat 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes heartWingBeat {
+  0% { transform: scale(0.9) rotate(-6deg); }
+  100% { transform: scale(1.15) rotate(6deg); }
+}
+
+.logo-date-center {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.logo-num {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, #ffeaa7 50%, #ff9f43 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(255, 150, 40, 0.65));
+}
+
+.logo-mon {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ffbe0b;
+  text-shadow: 0 0 12px rgba(255, 190, 40, 0.8);
+}
+
+.logo-tagline {
+  font-family: var(--font-script);
+  font-size: 15px;
+  color: #ffe8d6;
+  text-shadow: 0 0 10px rgba(255, 120, 30, 0.5);
+  margin-top: 2px;
+}
+
+/* Cute Nickname Pill */
+.nickname-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 180, 50, 0.35);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ffda79;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 12px;
+}
+
+/* Hero prev / next arrows */
+.hero-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(15, 8, 22, 0.75);
+  border: 1px solid rgba(255, 195, 80, 0.5);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.hero-nav-arrow.prev { left: 6px; }
+.hero-nav-arrow.next { right: 6px; }
+
+.hero-nav-arrow:hover {
+  background: rgba(255, 120, 40, 0.7);
+  transform: translateY(-50%) scale(1.12);
+}
+
+/* Floating Top Center 14 Nov Badge in Tree View */
+.header-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(20, 10, 30, 0.78);
+  border: 1.5px solid rgba(255, 190, 60, 0.5);
+  border-radius: 999px;
+  padding: 5px 13px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 140, 30, 0.35);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  animation: badgeBreathe 3s ease-in-out infinite alternate;
+  user-select: none;
+}
+
+@keyframes badgeBreathe {
+  0% { transform: scale(1); border-color: rgba(255, 190, 60, 0.5); }
+  100% { transform: scale(1.04); border-color: rgba(255, 220, 100, 0.85); box-shadow: 0 4px 22px rgba(255, 80, 110, 0.4), 0 0 20px rgba(255, 180, 50, 0.6); }
+}
+
+.badge-date-text {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  color: #ffbe0b;
+}
+
+.badge-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.badge-sub-text {
+  font-family: var(--font-script);
+  font-size: 15px;
+  color: #ffe8d6;
+}
+
+.message-date-tag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #ffda79;
+  text-shadow: 0 0 10px rgba(255, 180, 50, 0.7);
+  margin-bottom: 4px;
 }
 
 /* --- Hero Photo Frame & Animations --- */
@@ -1260,9 +1459,25 @@ html, body {
 .gallery-thumbs {
   display: flex;
   gap: 8px;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  padding-top: 2px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 4px 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 180, 50, 0.4) transparent;
+}
+
+.gallery-thumbs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(255, 180, 50, 0.45);
+  border-radius: 999px;
 }
 
 .thumb-btn {
@@ -1357,5 +1572,22 @@ html, body {
 
   .toast-line {
     white-space: normal;
+  }
+
+  .photo-modal-card {
+    max-width: 325px;
+    padding: 14px 12px 12px;
+  }
+
+  .header-date-badge {
+    padding: 4px 9px;
+  }
+
+  .badge-date-text {
+    font-size: 11px;
+  }
+
+  .badge-sub-text {
+    font-size: 13px;
   }
 }

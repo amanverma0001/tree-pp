@@ -1,6 +1,6 @@
 """
 Romantic Fractal Tree Animation with Python Turtle
-Inspired by the viral fractal tree animation for Sangu.
+Created with love for Tanu (PP) - Mera Pyara Kuchu Puchuu. 14 Nov ✨
 Run this script to watch the tree grow branch-by-branch!
 """
 
@@ -12,7 +12,7 @@ def setup_canvas():
     screen = turtle.Screen()
     screen.setup(width=720, height=880)
     screen.bgcolor("black")
-    screen.title("For Sangu - Always Stay Happy With Me 💖✨")
+    screen.title("For Tanu (PP) - Loves You Always 💖 14 Nov ✨")
     screen.tracer(0)
     return screen
 
@@ -113,11 +113,15 @@ def main():
     
     text_t.goto(0, -280)
     text_t.color("#ffe0b2")
-    text_t.write("Always Stay Happy with me..", align="center", font=("Georgia", 16, "italic"))
+    text_t.write("Loves you so much.. Always Stay Happy with me..", align="center", font=("Georgia", 15, "italic"))
 
-    text_t.goto(0, -325)
+    text_t.goto(0, -320)
     text_t.color("#ff9e2c")
-    text_t.write("dear Sangu 💖✨", align="center", font=("Arial", 22, "bold"))
+    text_t.write("dear Tanu (PP) 💖✨", align="center", font=("Arial", 22, "bold"))
+
+    text_t.goto(0, -355)
+    text_t.color("#ffbe0b")
+    text_t.write("14 Nov ✨ Mera Pyara Kuchu Puchuu", align="center", font=("Arial", 14, "bold"))
 
     screen.update()
     screen.mainloop()
